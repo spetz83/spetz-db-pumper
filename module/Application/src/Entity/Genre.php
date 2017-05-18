@@ -24,19 +24,19 @@ class Genre
      * @var string
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="UUID")
-     * @ORM\Column(name="id", type="guid")
+     * @ORM\Column(name="id", type="guid", unique=true)
      */
     protected $id;
 
     /**
      * @var string
-     * @ORM\Column(name="name")
+     * @ORM\Column(name="name", unique=true)
      */
     protected $name;
 
     /**
      * @var ArrayCollection
-     * @ORM\ManyToMany(targetEntity="Show", inversedBy="genres")
+     * @ORM\ManyToMany(targetEntity="TvShow", inversedBy="genres")
      * @ORM\JoinTable(name="shows_genres")
      */
     protected $shows;

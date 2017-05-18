@@ -24,7 +24,7 @@ class Movie
      * @var string
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="UUID")
-     * @ORM\Column(name="id", type="guid")
+     * @ORM\Column(name="id", type="guid", unique=true)
      */
     protected $id;
 

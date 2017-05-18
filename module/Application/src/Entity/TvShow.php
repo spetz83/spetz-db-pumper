@@ -13,18 +13,18 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Class Show
+ * Class TvShow
  * @package Application\Entity
  * @ORM\Entity
- * @ORM\Table(name="show")
+ * @ORM\Table(name="tv_show")
  */
-class Show
+class TvShow
 {
     /**
      * @var string
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="UUID")
-     * @ORM\Column(name="id", type="guid")
+     * @ORM\Column(name="id", type="guid", unique=true)
      */
     protected $id;
 

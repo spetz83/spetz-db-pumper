@@ -24,19 +24,19 @@ class Rating
      * @var string
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="UUID")
-     * @ORM\Column(name="id", type="guid")
+     * @ORM\Column(name="id", type="guid", unique=true)
      */
     protected $id;
 
     /**
      * @var string
-     * @ORM\Column(name="name", nullable=false)
+     * @ORM\Column(name="name", nullable=false, unique=true)
      */
     protected $name;
 
     /**
      * @var ArrayCollection
-     * @ORM\OneToMany(targetEntity="Show", mappedBy="rating")
+     * @ORM\OneToMany(targetEntity="TvShow", mappedBy="rating")
      */
     protected $shows;
 

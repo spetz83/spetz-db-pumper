@@ -24,7 +24,7 @@ class Actor
      * @var string
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="UUID")
-     * @ORM\Column(name="id", type="guid")
+     * @ORM\Column(name="id", type="guid", unique=true)
      */
     protected $id;
 
@@ -61,7 +61,7 @@ class Actor
 
     /**
      * @var ArrayCollection
-     * @ORM\ManyToMany(targetEntity="Show", inversedBy="actors")
+     * @ORM\ManyToMany(targetEntity="TvShow", inversedBy="actors")
      * @ORM\JoinTable(name="actors_shows")
      */
     protected $shows;
